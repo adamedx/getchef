@@ -1,34 +1,46 @@
 # GetChef
 
-Personal script to install Chef Client.
+Personal script to install Chef Client from package repositories.
 
 ## Prerequisites
 
-You must install git first on the node on which you want to install
-Chef to use this repository.
-
-Currently only Debian distributions are supported.
+* You must install `git` first on the node on which you want to install
+Chef tooling to use this repository.
+* Currently only Debian distributions are supported.
 
 ## Usage
 
-
-### Installing Chef Client
 After satisfying the prerequisites, do the following to install the
-latest nightly release of Chef Client:
+latest nightly release of Chef DK:
+
+* First, clone this repository from
+your shell and set its root as your shell's current directory:
 
 ```sh
 git clone https://github.com/adamedx/getchef
 cd getchef
-./getchef.sh
+```
+
+* The use any of the following commands to install Chef DK from within the repository:
+
+```sh
+sudo ./getchefdk.sh # If you want the latest nightly build
+sudo ./getchefdk-stable.sh # For the latest stable build
 
 ```
 
-For stable releases, a similar sequence of commands can be used:
+### Installing only Chef Client
+Similar to the commands above, you may use the following scripts to
+install just Chef Client (which is included in Chef DK):
 
 ```sh
-git clone https://github.com/adamedx/getchef
-cd getchef
-./getchef-stable.sh
+sudo ./getchef.sh
+```
+
+or
+
+```sh
+sudo ./getchef-stable.sh
 
 ```
 
